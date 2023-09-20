@@ -1,1 +1,60 @@
-Este es un nuevo Documento!
+Estos son los comandos para usar:
+
+antes de empezar: 
+
+-Abrimos la carpeta del proyecto y hacemos click derecho y seleccionamos "Git Bash here" (tener instalado git antes)
+
+-configurar nombre: git config --global user.name “Tomas Achaval”
+
+-configurar email: git config --global user.email “tavtomasachavalvinuesa@gmail.com”
+
+-configuración de color de git: git config --global color.ui true
+
+
+Para repositorio local:
+
+
+
+- Ahora en la linea de comandos ponemos "git init" para iniciar un respositorio local
+
+-Para saber el estado de los archivos ponemos "git status" de color rojo estará lo que aún no se subió al stage
+y de color verde lo que ya haya sido subido al stage
+
+-Para añadir algo al stage usamos "git add *nombreArchivo.extension*" (algunas variantes de *nombreArchivo.extension* son "." esto manda todo,
+"*.png" manda todos los archivos .png no subidos al stage, "css/" añade la carpeta css y todo lo que tiene adentro "pdf/*.pdf" manda todos los archivos de extension pdf de la carpeta pdf)
+
+-Para sacar un archivo del stage "git reset *.jpg" (se usan los mismos seletores que para add)
+
+-Para mandarlo al repositorio local hacemos un commit así: "git commit -m "mensaje para mi yo del futuro" "
+
+-Para ver historial de commits: "git log"
+
+-Para saber en que rama estamos: "git branch"
+
+-Para crear otra rama ponemos: "git branch *nombreRama*"
+
+-Para cambiar el nombre de la rama: "git branch -m nombreViejo nombreNuevo"
+
+-Para movernos entre ramas: "git checkout nombreRamaDestino"
+
+-Borrar una rama: "git branch -d nombreRama" (CUIDADO CON ESTO)
+
+-Para conocer la diferencia entre 2 ramas: "git diff nombreRama1 nombreRama2"
+
+-Para unificar 2 ramas en una sola: "git merge nombreRamaOrigen nombreRamaDestino" (se debe estar parado en la rama que va a recibir los cambios
+
+
+
+
+Para repositorio remoto: 
+
+-Primero asociamos el repositorio local con el remoto con este comando: "git remote add origin *url repositorio)
+	* la palabra origin es el nombre que se le asocia, puede ser cualquier cosa pero es una práctica común usar esa plabra
+	* la URL del repositorio es el link que tenés cuando estas en la página del respositorio de GitHub Ej: https://github.com/TomasAchavalVinuesa/PruebaGit
+
+-Para subir a GitHub (ya debemos tener asociado el repositorio) ponemos: "git push -u origin *rama*"
+	*la rama predeterminada es "master" y aparece en el git al lado de la dirección de la carpeta entre paréntesis y de un color entre celeste y verde
+
+-Para clonar un repositorio COMPLETO, nos posicionamos en una carpeta donde lo queremos y abrimos el git bash y ponemos: "git clone *url repositorio*"
+
+-Para copiar solo los cambios que se hayan hecho en el repositorio remoto que no tengamos en le repositorio local ponemos (estando parados en la carpeta del proyecto con el git bash): "git pull origin *nombreRamaTraida*"
